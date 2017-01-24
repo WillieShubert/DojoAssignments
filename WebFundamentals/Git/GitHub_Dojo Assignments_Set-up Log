@@ -1,0 +1,39 @@
+Willies-MacBook-Pro:~ willieshubert$ cd /Users/willieshubert/desktop/DojoAssignments
+Willies-MacBook-Pro:DojoAssignments willieshubert$ git init
+Initialized empty Git repository in /Users/willieshubert/Desktop/DojoAssignments/.git/
+Willies-MacBook-Pro:DojoAssignments willieshubert$ git add .
+Willies-MacBook-Pro:DojoAssignments willieshubert$ git commit -m "initial commitfrom day one git lessons."
+[master (root-commit) 0ab7cf9] initial commitfrom day one git lessons.
+ 15 files changed, 58 insertions(+)
+ create mode 100644 MEAN/about.txt
+ create mode 100644 Python/about.txt
+ create mode 100644 Ruby/about.txt
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Git/about.txt
+ create mode 100644 WebFundamentals/Git/git_commands.txt
+ create mode 100644 WebFundamentals/Git/intro to git commands log.rtf
+ create mode 160000 WebFundamentals/Git/new_project
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/assignments.txt
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+ create mode 100644 WebFundamentals/about.txt
+ create mode 100644 iOS/about.txt
+ create mode 100644 netCore/about.txt
+Willies-MacBook-Pro:DojoAssignments willieshubert$ git remote add origin https://github.com/WillieShubert/DojoAssignments.git
+Willies-MacBook-Pro:DojoAssignments willieshubert$ git push -u origin master
+Username for 'https://github.com': WillieShubert    
+Password for 'https://WillieShubert@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 2.05 KiB | 0 bytes/s, done.
+Total 10 (delta 0), reused 0 (delta 0)
+To https://github.com/WillieShubert/DojoAssignments.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Willies-MacBook-Pro:DojoAssignments willieshubert$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Willies-MacBook-Pro:DojoAssignments willieshubert$ 
