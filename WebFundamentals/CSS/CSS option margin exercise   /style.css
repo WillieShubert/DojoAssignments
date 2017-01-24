@@ -1,0 +1,52 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#wrapper{
+ width: 1200;
+ height: 1500px;
+ background-color: silver;
+ margin: 0px auto;
+ padding: 7px
+}
+h1{ text-align: center;}
+}
+#header{
+ height: 400px;
+ width: auto;
+ vertical-align: top;
+ display: inline-block;
+ text-align: center;
+} 
+#main_content{
+ height: 400px;
+ width: auto ;
+ vertical-align: top;
+ display: inline-block;
+}
+.blue_image{
+ height: 200px;
+ width: 200px;
+ margin: 5px;
+ padding: 20px;
+ background-color: blue;
+ border: solid;
+ display: inline-block;
+}
+.red_image{
+ height: 200px;
+ width: 200px;
+ margin: 5px;
+ padding: 20px;
+ background-color: red;
+ border: solid;
+ display: inline-block;
+}
+#advertisement{
+ height: 120px;
+ width: 660px;
+ background-color: purple;
+ margin-top: 15px;
+ margin-bottom: 5px;
+ margin-left: 20px;
+}
