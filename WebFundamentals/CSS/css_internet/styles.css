@@ -1,0 +1,64 @@
+body {
+  	width: 1200px;
+  	background: #C9C9C9;
+  	font-family: sans-serif;
+}
+
+h3{
+	color: blue;
+}
+.header{
+	height: 200px;
+	width: 100%;
+}
+
+.main_text{ 
+	width: 600px;
+	margin-left: 20px;
+	display: inline-block;
+	vertical-align: top;
+	background: yellow;
+} 
+
+.main_text div{
+	
+}
+
+.main_text a{
+	color: blue;
+
+}
+
+.sidebar{
+	width: 410px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	background-repeat: green;
+	padding: 10px
+}
+.sidebar div{
+	display: inline-block;
+}
+
+.sidebar h3{
+	color: red;	
+}
+
+.contact{
+display: inline;
+}
+
+.learn{
+	border: 3px 3px 0px 3px blue solid;
+
+}
+.advert{
+	height: 300px;
+	width:280px;
+	background-image: url("images/ad_background.png")
+}
+
+.advert button{
+
+}

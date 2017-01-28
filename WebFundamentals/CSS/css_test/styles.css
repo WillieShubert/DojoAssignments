@@ -1,0 +1,172 @@
+*{
+margin: 0px;
+padding: 0px;
+font-family: serif;
+color: white;
+}
+
+body {
+	width: 1080px
+}
+h1{
+	color: white;
+	font-size: 30px;
+	padding-left: 3px;
+	padding-top: 8px;
+}
+h2{
+	color: #ff9222;
+	font-size: 15px;
+}
+
+p{
+	font-size: 10px;
+	margin-bottom: 3px;
+}
+
+div{
+	background: black;
+	display: inline-block;
+}
+
+
+
+.header{
+	height: 150px;
+	width: 1080px;
+	background-color: #191919;
+	display: inline-block;
+}
+.header img{
+	position: relative;
+	left: 30px;
+	top: 40px;
+}
+
+.header p{
+	text-align: right;
+	padding-right: 30px;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+.menu{
+	height: 50px;
+	width: 1080px;
+	display: block;
+	background: -moz-linear-gradient(bottom,#3b3b3b, #5d5d5d); 
+  	background: -webkit-radial-gradient(bottom,#3b3b3b, #5d5d5d); 
+  	background: linear-gradient(bottom,#3b3b3b,#5d5d5d); 
+}
+
+.menu ul li{
+	 display: inline-block;
+	 padding: 17px 15px 20px 15px;
+	 border-right: 1px solid silver;
+}
+
+.features{
+	height: 150px;
+	width:1080px;
+	background-color: #181818;
+	vertical-align: top;
+	margin-top: -5px;
+}
+.feature_box{
+	height: 150px;
+	width:200px;
+	background-color: #181818;
+	display: inline-block;
+	padding: 30px 45px 30px 35px;  
+}
+
+.feature_box img{
+	float: left;
+}
+
+.sale{
+	height: 200px;
+	width: 1080px; 
+	background: repeating-linear-gradient(135deg, #181818, #181818 2px, #5c5c5c 4px,#5c5c5c 6px);
+	display: inline-block;
+}
+
+.sale h1{
+	color: white;
+	font-size: 30px;
+	display: inline-block;
+	margin-left: 30px;
+	padding-top: 60px;
+	font-family: sans-serif;
+}
+.sale p{
+	color: white;
+	font-size: 20px;
+	margin-left: 30px;
+	padding-right: 400px;
+	font-family: sans-serif;
+}
+.sale button{
+	text-align: right;
+	margin-left: 10px;
+	right: 30px;
+	background-color: #ff8100;
+	font-size: 18px;
+	font-family: sans-serif;
+	border-radius: 5px;
+	padding: 12px 28px;
+	position: relative;
+	left: 850px;
+	top: -60px;
+}
+.more{
+	background-color: #191919;
+	display:block;
+}
+.more a{
+	position: relative;
+	left: 850px;
+	top: -5px;
+} 
+.more h3{
+	position: relative;
+	left: 19px;
+	top: 17px;
+} 
+
+.portfolio{
+	height: auto;
+	width: 1080px;
+	background-color: #191919;
+
+}
+.portfolio h3{
+	font-size: 20px;
+	color: white;
+	display: inline-block;
+}
+
+.special{
+	color: #ff8100;
+	font-style: italic;
+	text-align: right;
+	display: inline-block;
+}
+
+.folio_box{
+	height: 300px;
+	width:250px; 
+	background-color: #181818;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.folio_box p{
+	padding: 4px;
+	margin: 3px;	
+}
+
+.folio_box img{
+	padding-bottom: 10px;
+}
