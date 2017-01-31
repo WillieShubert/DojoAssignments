@@ -1,18 +1,17 @@
-var quarters = 50
-
 function slotmachine(quarters){
 while (quarters>=0) {
-    quarters--;
+    --quarters;
 
-    var chance = math.trunc((math.random()*100+1);
-    var win = math.trunc((math.random()*100+50);
+    var chance = Math.floor((Math.random()*100)+1);
+    var win = Math.floor((Math.random()*50)+50);
 
-    if(chance = 20){
+    if(chance === 40){
       quarters = quarters+win;
+      console.log("BIG WINNER! You now "+quarters+" quarters after winning "+win);
     }
-    if(quaters = 0){
-      console.log("Game Over")
+    if(quarters === 0){
+      return "0 Quarters! Game Over, Big Loser";
     }
-  console.log(quaters)
+  }
 }
-return quarters
+console.log(slotmachine(3000));
