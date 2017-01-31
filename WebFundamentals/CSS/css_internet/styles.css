@@ -3,25 +3,48 @@ body {
   	background: #C9C9C9;
   	font-family: sans-serif;
 }
+a{
+  color: #1ed8f8;
+}
 
 h3{
-	color: blue;
+	color: #2722bd;
 }
 .header{
-	height: 200px;
-	width: 100%;
+	height: 50px;
+	width: 1200px;
 }
 
-.main_text{ 
-	width: 600px;
+.header img{
+	position: absolute;
+	top: 10px
+	left: 15px;
+}
+.header p{
+  position: absolute;
+  top: 9px;
+  left: 92px;
+  font-size: 33px;
+
+ }
+
+.subheader{
+	height: 50px;
+	width: 1200px;
+	background-color: #2722bd;
+	color: white;
+	font-size: 24px;
+}
+
+.main_text{
+	width: 855px;
 	margin-left: 20px;
 	display: inline-block;
 	vertical-align: top;
-	background: yellow;
-} 
+}
 
 .main_text div{
-	
+
 }
 
 .main_text a{
@@ -30,35 +53,63 @@ h3{
 }
 
 .sidebar{
-	width: 410px;
+	width: 300px;
 	display: inline-block;
 	vertical-align: top;
-	text-align: center;
+	text-align: left;
 	background-repeat: green;
-	padding: 10px
+	padding: 10px;
 }
 .sidebar div{
 	display: inline-block;
 }
 
 .sidebar h3{
-	color: red;	
+	color: red;
+	text-align: left;
+}
+.sidebar button{
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  background: #2722bd;
+  text-align: center;
+  height: 40px;
+  width: 300px;
+  margin: 2px;
+
 }
 
 .contact{
 display: inline;
+text-align: right;
 }
 
 .learn{
-	border: 3px 3px 0px 3px blue solid;
-
+	border :blue solid 3px;
+	border-top:
 }
+
+.learn img{
+  float: left;
+  margin-right: 35px;
+}
+
 .advert{
-	height: 300px;
+  margin-top: 75px;
+  height: 300px;
 	width:280px;
 	background-image: url("images/ad_background.png")
 }
 
 .advert button{
+  padding: 15px 100px;
+	display: inline;
+	border-radius: 5px;
+	font-size: 16px;
+}
 
+.important{
+  color: #1ed8f8;
 }
