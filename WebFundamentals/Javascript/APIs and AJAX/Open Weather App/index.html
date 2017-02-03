@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OpenWeatherMap</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      function kelvintoF (num){
+        return 9/5*(num-273)+32;
+      }
+
+            $(document).ready(function() {
+              $('form').submit(function() {
+                var place = $('#city').val();
+                  console.log(place);
+                var url = "";
+                url += "http://api.openweathermap.org/data/2.5/weather?q="+place+",us&appid=1501edba12bffa34c539dca36ccd8c61";
+                $.get(url, function(res){
+                    console.log(res);
+                    $('div').append("<h1>"+ res.name + "</h1>");
+                    $('div').append("<h3>"+ kelvintoF(res.main.temp)+ "</h3>");
+                }, 'json');
+                    return false;
+            });
+          });
+    </script>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" id='city' name="city" value="San Jose">
+      <input type="submit" value="Check the Weather">
+    </form>
+    <div class="result">
+
+    </div>
+
+
+  </body>
+</html>
