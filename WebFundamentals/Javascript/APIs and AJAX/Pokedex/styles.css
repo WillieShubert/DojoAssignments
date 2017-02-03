@@ -1,0 +1,26 @@
+body{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.left{
+  display: inline-block;
+  width: 60%;
+  height: 700px;
+  overflow-y: scroll;
+  vertical-align: top;
+}
+
+.right{
+  display: inline-block;
+  vertical-align: top;
+  border: 4px red solid;
+  width: 30%;
+  height: 550px;
+  padding-left: 40px;
+}
+
+.right img{
+  padding-left: 110px;
+}
