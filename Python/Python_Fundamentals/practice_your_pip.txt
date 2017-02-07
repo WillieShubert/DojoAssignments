@@ -1,0 +1,34 @@
+1.
+
+pip install Django collects, downloads, and installs the packages needed for Django
+
+2. 
+
+pip lists shows the directories you have downloaded and their version.
+
+3. 
+
+Django is a only one package and it has a .whl file type.
+
+4. 
+
+pip freeze sets (==) the software version to a specific release. Perhaps this is used to mimic a specific server environment or software requirement
+
+5. 
+
+pip freeze creates a file a la "touch." 
+
+6. 
+
+pip uninstall removes all Django packages
+
+7.
+
+pip show provides the metadata for the package
+
+8.
+
+pip search lists all of the package description metadata for each package associated with the framework. 
+
+
+
