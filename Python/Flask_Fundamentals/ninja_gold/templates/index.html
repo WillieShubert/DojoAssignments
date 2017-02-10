@@ -1,0 +1,44 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Ninja Gold</title>
+  <link rel="stylesheet" href="styles.css">
+ </head>
+  <body>
+    <div class="counter">
+      <p>Your Gold:</p>
+
+    </div>
+    <div class = "gold_digger">
+      <div class="gold_options">
+        <h2>Farm</h2>
+        <p>(earns 10-20 golds)</p>
+        <form class="farm" action="/process_money" method="post">
+          <input type="submit" name='farm' value="Find Gold">
+        </form>
+      </div>
+      <div class="gold_options">
+        <h2>Cave</h2>
+        <p>(earns 5-10 golds)</p>
+        <form class="cave" action="/process_money" method="post">
+          <input type="submit" name='cave' value="Find Gold">
+        </form>
+      </div>
+      <div class="gold_options">
+        <h2>House</h2>
+        <p>(earns 2-5 golds)</p>
+        <form class="house" action="/process_money" method="post">
+          <input type="submit" name='house' value="Find Gold">
+        </form>      </div>
+      <div class="gold_options">
+        <h2>Cave</h2>
+        <p>(earns 5-10 golds)</p>
+        <form class="casino" action="/process_money" method="post">
+          <input type="submit" name='casion' value="Find Gold">
+        </form>
+      </div>
+    </div>
+    <h2>Activity</h2>
+
+  </body>
+</html>

@@ -1,0 +1,9 @@
+div.gold_digger{
+  display: block;
+  width: 100%
+}
+
+div.gold_options{
+  display: inline-block;
+  width: 20%
+}
