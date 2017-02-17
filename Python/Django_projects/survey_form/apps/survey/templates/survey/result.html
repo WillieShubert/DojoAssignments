@@ -1,0 +1,16 @@
+<html>
+    <head>
+      <title>Flask Results</title>
+    </head>
+    <body>
+      <h3>Submitted Info</h3>
+      <p>Name: {{request.session.name}}</p>
+      <p>Dojo Location: {{request.session.location}}</p>
+      <p>Favorite Language: {{request.session.language}}</p>
+      <p>Comment: {{request.session.comment}}</p>
+      <p>You have submitted this from {{request.session.counter}}</p>
+      <form action="/" method="get">
+        <input type="submit" value="back">
+      </form>
+    </body>
+</html>
