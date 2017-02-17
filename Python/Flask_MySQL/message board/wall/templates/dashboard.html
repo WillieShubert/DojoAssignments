@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>email_validation</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type href="{{url_for('static', filename = "css/styles.css")}}">
+  </head>
+  <body>
+    <div class="container">
+     <H3 class='card-panel teal lighten-2'>Welcome to your dashboard:</h3>
+       {% with messages = get_flashed_messages() %}
+       {% if messages %}
+       {% for me in messages %}
+        <p class='green'>{{ me }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form action="/share" method="post">
+          <h3>Post A message</h3>
+          <label for="message">Share a message:</label>
+          <textarea cols="200" rows = "3" name="message" value="From one mind to another..."></textarea>
+          <input class= 'btn' type="submit" value="post a message">
+        </form>
+        <!-- for posting a message -->
+        {% for message in messages %}
+        <h5> {{message.first_name}} {{message.last_name}}    {{message.created_at}} </h5>
+        </p>{{message.message}} </p>
+
+       <!-- For displaying comment -->
+          <div class="comments">
+            {% for comment in comments %}
+            {% if comment.message_id == messages.id %}
+            <h5>{{comment.first_name}} {{comment.last_name}} - {{comment.created_at}}</h5>
+            <p>
+              {{comment.comment}}
+            </p>
+            {% endif %}
+            {% endfor %}
+          </div>
+           <!-- form for comment -->
+          <form action="/react" method="post">
+            <input type="hidden" name = "messageid" value = {{messages.id}} />
+            <textarea cols="150" rows = "2" name="comment"></textarea>
+            <button type="submit" class="btn">Post a comment!</button>
+          </form>
+        {% endfor %}
+  </body>
+</html>
