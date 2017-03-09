@@ -1,0 +1,25 @@
+<html>
+    <head>
+       <title>Form Test Index</title>
+    </head>
+    <body>
+      <form action='/dojo/new', method='POST'>
+        <p>Name:</p><input type='text' name='name'>
+        <p>Dojo Location</p>
+        <select name='location'>
+          <option value="sjc">San Jose</option>
+          <option value="sea">Seattle</option>
+          <option value="lax">Los Angeles</option>
+          <option value="dca">Washington DC</option>
+        </select>
+        <select name='language'>
+          <option value="py">Python</option>
+          <option value="js">JavaScript</option>
+          <option value="php">PHP</option>
+          <option value="ruby">Ruby</option>
+        </select>
+        <p>Comment (optional):</p><textarea name="comment" rows="10" cols="30"></textarea>
+        <br><input type='submit' value='Create Results'></br>
+      </form>
+    </body>
+</html>
