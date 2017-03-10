@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        <title>JS Survey Form</title>
+    </head>
+    <body>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">Dojo Survey Form - JS Edition</a>
+        </div>
+      </nav>
+      <form class='container' action='/result', method='POST'>
+        <p>Name:</p><input type='text' name='name'>
+        <label>Dojo Location</label>
+          <select name='location' class="browser-default">
+            <option value="" disabled selected>Choose your Location</option>
+            <option value="San Jose">San Jose</option>
+            <option value="Seattle">Seattle</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Washington DC">Washington DC</option>
+          </select>
+        <label>Languages</label>
+          <select name='language' class="browser-default">
+            <option value="" disabled selected>Choose your Language</option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+            <option value="Ruby">Ruby</option>
+          </select>
+        <p>Comment (optional):</p><textarea name="comment" class='materialize-textarea'></textarea>
+        <br><input type='submit' value='Create Results'></br>
+      </form>
+    </body>
+</html>
