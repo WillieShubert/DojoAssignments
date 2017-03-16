@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <title>Mongoose - Message Board</title>
+  </head>
+  <body>
+    <nav>
+       <div class="nav-wrapper">
+         <a href="/" class="brand-logo">Mongoose - Message Board</a>
+       </div>
+     </nav>
+     <form class='container' action='/message', method='POST'>
+       <p>Name:</p><input type='text' name='name'>
+       <p>Message:</p><input type='text' name='message'>
+       <br><input type='submit' value='Share message'></br>
+     </form>
+     <% for(var i=0; i<message.length; i++) { %>
+        <div class="container">
+          <div class="col s12 m6">
+            <div class="card-panel teal lighten-2">
+              <div class="card-content white-text">
+                <b>Name: <%= message[i].name %></b>
+                <p>Message: <%= message[i].message %></p>
+                <p>Comments:</p>
+                  <% for(comment of message[i].comments) { %>
+                  <b><%= comment.name %></b>
+                  <p><%= comment.comment %></p>
+                  <% } %>
+              </div>
+              <div class="card-action">
+                <form class='' action='/comment/<%= message[i]._id %>', method='POST'>
+                  <p>Name:</p><input type='text' name='name'>
+                  <p>Comment:</p><input type='text' name='comment'>
+                  <br><input type='submit' value='Share comment'></br>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+  </body>
+</html>
