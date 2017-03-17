@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = 'app'>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src = 'bower_components/angular/angular.js'></script>
+  <script>
+  var app = angular.module('app', []);
+  app.controller('foodsController', [foodsController]);
+
+    function foodsController() {
+      this.foods = ['Banana Flakes','Crunchy Batmans'];
+    }
+
+    foodsController.prototype.addFood = function(){
+      this.foods.push(this.food);
+      this.food = '';
+      return this;
+    }
+  </script>
+</head>
+<body>
+    <div ng-controller = "foodsController as FC">
+        <div>
+          <h2>Favorite Food:</h2>
+          <form ng-submit="FC.addFood()">
+            <input type="text" ng-model = 'FC.food'>
+            <input type="submit" value="add my favorite">
+          </form>
+          <p ng-if="FC.food"> You are currently typing: {{FC.food}}</p>
+        </div>
+        <div>
+          <h2><u>Food Stuffs</u></h2>
+          <input placeholder="filter..." type="text" ng-model="FC.foodFilter">
+          <div ng-repeat="food in FC.foods | filter:FC.foodFilter track by $index">
+              <p>{{food}}</p>
+          </div>
+        </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html ng-app='app'>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js'></script>
+    <script type='text/javascript'>
+      var AppModule = angular.module('app', []);
+      AppModule.controller('divController', ['$scope', function($scope){
+        $scope.myName = 'Willie';
+        $scope.myFavoriteLanguage = 'JavaScript';
+        $scope.myFavoriteJSLibrary = 'Angular';
+      }
+    ]);
+    </script>
+</head>
+<body>
+  <div ng-controller="divController">
+    <p>Hello my name is {{myName}} and my favorite language is {{myFavoriteLanguage}} because {{myFavoriteJSLibrary}} is awesome!</p>
+  </div>
+</body>
+</html>
+
+
+sudo ln -s /etc/nginx/sites-available/modular_mongoose_dashboard /etc/nginx/sites-enabled/modular_mongoose_dashboard
