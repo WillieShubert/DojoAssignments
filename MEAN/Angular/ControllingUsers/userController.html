@@ -10,6 +10,7 @@
       app.controller('usersController', ['$scope', function($scope){
         $scope.createUser = function(){
            $scope.users.push($scope.user);
+           $scope.users = {};
          }
          $scope.deleteUser = function(userToDelete){
            $scope.users = $scope.users.filter( function(userObj){
@@ -38,9 +39,9 @@
   </script>
 </head>
 <body ng-app='app'>
-    <div class= 'container' ng-controller='usersController'>
+    <div class= 'container' ng-controller='usersController as UC'>
       <div class='col s12'>
-        <form ng-submit="createUser()">
+        <form ng-submit="UC.createUser()">
           <input type="text" ng-model='user.firstName' placeholder="Your first name">
           <input type="text" ng-model='user.lastName'  placeholder="Your last name">
           <input type="text" ng-model='user.favoriteLanguage' placeholder="Favorite Language">
