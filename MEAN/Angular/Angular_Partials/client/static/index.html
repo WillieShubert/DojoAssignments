@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app = 'app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Routes </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="angular/angular.js" charset="utf-8"></script>
+    <script src="angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="users.js" charset="utf-8"></script>
+  </head>
+  <body>
+      <h1>User </h1>
+      <a href='#!/user_customizer'>Customize Users</a> <b>|| </b> <a href="#!/user_list">Users List</a>
+      <div ng-view=''>
+        <!-- Partials load here!! -->
+      </div>
+  </body>
+</html>
