@@ -28,3 +28,5 @@ $ mongo
 > db.students.update({}, {$rename:{'number_of_belts':'belts_earned'}}, {multi: true })
 > db.students.update({}, {$unset:{lucky_number:''}}, {multi: true })
 > db.students.update({}, {"$set": { "date": new Date()}} ,{multi: true})
+
+3607886428 Sarah and Karen. 

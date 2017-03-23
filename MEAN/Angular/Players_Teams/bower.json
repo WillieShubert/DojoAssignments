@@ -1,0 +1,21 @@
+{
+  "name": "Angular_Routels",
+  "homepage": "https://github.com/WillieShubert/DojoAssignments",
+  "authors": [
+    "willieshubert <willie.pictograms@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3"
+  }
+}

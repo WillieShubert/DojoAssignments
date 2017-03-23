@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>Users Controller</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src='bower_components/angular/angular.js'></script>
+  <script type='text/javascript'>
+      var app = angular.module('app', []);
+      app.controller('usersController', ['$scope', function($scope){
+        $scope.createUser = function(){
+           $scope.users.push($scope.user);
+           $scope.user = {};
+         }
+         $scope.deleteUser = function(userToDelete){
+           $scope.users = $scope.users.filter( function(userObj){
+             return userObj !== userToDelete;
+           })
+         }
+
+         $scope.users = [
+          {
+            firstName: "Charlie",
+            lastName: "Mead",
+            favoriteLanguage: "JavaScript"
+          },
+          {
+            firstName: "Mike",
+            lastName: "Hannon",
+            favoriteLanguage: "Python"
+          },
+          {
+            firstName: "Sara",
+            lastName: "Wong",
+            favoriteLanguage: "Ruby"
+          }
+        ];
+     }]);
+  </script>
+</head>
+<body ng-app='app'>
+    <div class= 'container' ng-controller='usersController'>
+      <div class='col s12'>
+        <form ng-submit="createUser()">
+          <input type="text" ng-model='user.firstName' placeholder="Your first name">
+          <input type="text" ng-model='user.lastName'  placeholder="Your last name">
+          <input type="text" ng-model='user.favoriteLanguage' placeholder="Favorite Language">
+          <input type="submit" value="Add User">
+        </form>
+      </div>
+      <label>Search Users</label>
+      <input type="text" ng-model="UC.userFilter">
+      <table class="highlight">
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Favorite Language</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="userObj in users | filter: userObjFilter track by $index ">
+            <td>{{ userObj.firstName }}</td>
+            <td>{{ userObj.lastName }}</td>
+            <td>{{ userObj.favoriteLanguage }}</td>
+            <td><button ng-click='deleteUser(userObj)'>Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+</body>
+</html>
