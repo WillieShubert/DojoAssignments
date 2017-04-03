@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='app'>
   <head>
     <meta charset="utf-8">
     <title>First MEAN</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <script src='./angular/angular.js'></script>
+    <script src='./angular-route/angular-route.js'></script>
+    <script src='./js/config/routes.js'></script>
+    <script src="./js/controllers/newcontroller.js" charset="utf-8"></script>
+    <script src="./js/controllers/editcontroller.js" charset="utf-8"></script>
+     <script src="./js/factories/friends_factory.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Welcome</h1>
+    <h4>Welcome</h4>
+    <a href="/#!/new">Create Friends</a>
+    <a href="/#!/edit">Edit Friends</a>
+    </nav>
+    <div ng-view="">
+    </div>
   </body>
 </html>
