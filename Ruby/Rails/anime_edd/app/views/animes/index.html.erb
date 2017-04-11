@@ -1,0 +1,6 @@
+<h1>List All Animes</h1>
+<p>Textity text</p>
+<a href="/animes/new">New Anime</a>
+<% @animes.each do |a| %>
+  <p> <a href="/animes/<%= a.id %>"><%= a.name %> </a> </p>
+<% end %>
