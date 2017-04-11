@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <h1>Your Gold Amount <%= @gold %></h1>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-3">
+      <h1>Farm</h1>
+      <p>10-20 Gold</p>
+      <form action="/farm" method="post" >
+        <input type="hidden" name="authenticity_token" value="<%form_authenticity_token %>">
+        <button class="btn btn-danger">Find Gold</button>
+      </form>
+    </div>
+    <div class="col-md-3">
+      <h1>Cave</h1>
+      <p>5-10 Gold</p>
+      <form action="/cave" method="post" >
+        <input type="hidden" name="authenticity_token" value="<%form_authenticity_token %>">
+        <button class="btn btn-default">Find Gold</button>
+      </form>
+    </div>
+    <div class="col-md-3">
+      <h1>House</h1>
+      <p>2-5 Gold</p>
+      <form action="/house" method="post" >
+        <input type="hidden" name="authenticity_token" value="<%form_authenticity_token %>">
+        <button class="btn btn-success">Find Gold</button>
+      </form>
+    </div>
+    <div class="col-md-3">
+      <h1>Casino</h1>
+      <p>10-20 Gold</p>
+      <form action="/casino" method="post" >
+        <input type="hidden" name="authenticity_token" value="<%form_authenticity_token %>">
+        <button class="btn btn-info">Find Gold</button>
+      </form>
+    </div>
+  </div>
+    <div class="d-flex flex-row" style= "border: 2px solid black; overflow: scroll; height: 100px">
+      <% @log.each do |record| %>
+        <% if record['won'] == true %>
+            <p class="text-success"> <%= record['log'] %></p>
+        <% else %>
+            <p class="text-danger"> <%= record['log'] %> </p>
+        <% end %>
+      <% end %>
+    </div>
+</div>
