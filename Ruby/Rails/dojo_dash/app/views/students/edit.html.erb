@@ -1,0 +1,24 @@
+<h1>Editing <%= @student.first_name %> <%= @student.last_name %></h1>
+<div class="container">
+  <form action="/students/<%= @student.id %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="patch">
+    <label> First Name:</label><input type="text" name="student[first_name]" value= "<%= @student.first_name %>" >
+    <label>Last Name:</label><input type="text" name="student[last_name]" value= "<%= @student.last_name %>">
+    <label>City Name:</label><input type="text" name="student[email]" value= "<%= @student.email %>">
+    <label>Location:</label>
+    <select name="student[dojo_id]" class="browser-default">
+      <option value="<%=@dojo.id%>"><%=@dojo.branch%></option>
+      <% @dojos.each do |dojo| %>
+      <option value="<%=dojo.id%>"><%=dojo.branch%></option>
+      <% end %>
+    </select>
+    <input type="submit" name="" value="Update Student">
+  </form>
+</div>
+<a href="/dojos">Home</a> | <a href="/dojos/<%= @dojo.id %>">Show</a>
+<form class="" action="/dojos/<%= @dojo.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Delete">
+</form>
