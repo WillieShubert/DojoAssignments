@@ -1,5 +1,5 @@
 class BankAccount
-	
+
 	@@no_of_accounts = 0
 	attr_accessor :name
 	attr_reader :checking, :savings
@@ -12,7 +12,7 @@ class BankAccount
 		@interest_rate = 0.01
 		generate_acc_num
 		puts "Created account #{@@no_of_accounts}"
-	end	
+	end
 
 # BankAccount should have a method that returns the user's checking account balance
 
@@ -47,24 +47,30 @@ class BankAccount
   	end
 
   	def withdraw_checking(num)
-  		if num > @checking 
-  			puts "Insufficent Funds"
+  		if num > @checking
+  			raise "Insufficent Funds"
   			self
-  		else 
+  		else
 	  		@checking -= num
 	  		puts "Withdrawing from checking #{num}!"
   			self
-		end
+		  end
   	end
 
+    def total_balance
+		  "#{@savings+@checking}"
+    end
+
   	def account_information
-    	puts "Account Holder: #{@name}"
+			puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+			puts "Account Holder: #{@name}"
     	puts "Accunt Number: #{@account_num}"
-    	puts "Checking Balance: #{@checking}" 
+    	puts "Checking Balance: #{@checking}"
     	puts "Saving Balance: #{@savings}"
     	puts "Total Balance: #{@savings+@checking}"
     	puts "Interest Rate: #{@interest_rate}%"
-  	end 
+			puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  	end
 
   	def account_manager
   		puts "The bank has #{@@no_of_accounts} accounts open"
@@ -74,16 +80,15 @@ private
   	def generate_acc_num
   		@account_num = rand(10000000-1000000)+1000000
   	end
-end 
+end
 
 
 carlos = BankAccount.new("Carlos")
 
-carlos.deposit_saving(1000).deposit_checking(1000).account_information
-carlos.withdraw_checking(5000)
-
-willie = BankAccount.new("Willie")
-willie.deposit_checking(1_000_000_000).account_information
-
-willie.account_manager
-
+# carlos.deposit_saving(1000).deposit_checking(1000).account_information
+# carlos.withdraw_checking(5000)
+#
+# willie = BankAccount.new("Willie")
+# willie.deposit_checking(1_000_000_000).account_information
+# willie.total_balance
+# willie.account_manager

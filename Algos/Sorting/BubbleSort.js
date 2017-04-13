@@ -6,7 +6,7 @@ function bubbleSort(arr){
         var temp = arr[j+1];
         arr[j+1] = arr[j];
         arr[j] = temp;
-        sorted = false
+        sorted = false;
       }
       if(sorted == true){
         return arr;
@@ -14,5 +14,5 @@ function bubbleSort(arr){
     };
   };
 }
-test = [2,4,1,7,4,63,4];
-console.log(bubbleSort(test))
+test = [2,4,1,7,4,63,4]
+bubbleSort(test)
