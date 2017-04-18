@@ -1,0 +1,42 @@
+<nav class="nav-wrapper">
+  <a href="#" class="brand-logo">Ruby Wall</a>
+
+  <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <li> Welcome <%= @current_user.first_name %> </li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>
+<h1>Post a Message</h1>
+<% if flash %>
+  <% flash.each do |key, value| %>
+    <% Array(value).each do |elem| %>
+      <p class='green'><%= elem %></p>
+    <% end %>
+  <% end %>
+<% end %>
+<div class="container">
+  <form action = "/messages" method = "post">
+    <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+    <input type="hidden" name="message[user_id]" value="<%= @current_user.id %>">
+    <label for="message[message]">Message</label>
+    <textarea name="message[message]" id="message" rows="8" cols="80"></textarea>
+    <input type="submit" class="btn" value="Post a Message">
+  </form>
+  <% @messages.each do |message| %>
+  <b><%= message.user.first_name %> <%= message.user.last_name %> |  Posted: <%= message.created_at.strftime("%B #{message.created_at.day.ordinalize}, %Y") %> </b>
+  <p><%= message.message %> </p>
+    <% @comments.each do |comment| %>
+    <% if comment.message_id == message.id %>
+      <b><%= comment.user.first_name %> <%= comment.user.last_name %> |  Posted: <%= comment.created_at.strftime("%B #{comment.created_at.day.ordinalize}, %Y") %> </b>
+      <p> <%= comment.comment %></p>
+      <% end %>
+    <% end %>
+    <form action="/comment" method="post">
+       <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+       <input type="hidden" name = "comment[message_id]" value = "<%= message.id %>" >
+       <input type="hidden" name = "comment[user_id]" value = "<%= @current_user.id %>" >
+       <textarea cols="150" rows = "2" name="comment[comment]"></textarea>
+       <button type="submit" class="btn">Post a comment!</button>
+   </form>
+  <% end %>
+</div>

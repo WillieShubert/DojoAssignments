@@ -1,0 +1,20 @@
+<h1>Sign In</h1>
+<% if flash %>
+  <% flash.each do |key, value| %>
+    <% Array(value).each do |elem| %>
+      <p style: "color:red" ><%= elem %></p>
+    <% end %>
+  <% end %>
+<% end %>
+<div class="container">
+  <form action = "/users" method = "post">
+    <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+    <label>Username</label>
+    <input type="text" name="user[username]" id = "username">
+    <label>First Name</label>
+    <input type = "text" name = "user[first_name]" id = "first_name">
+    <label>Last Name</label>
+    <input type="text" name="user[last_name]" id = "last_name">
+    <input type = "submit" class= 'btn' value = "Sign In">
+  </form>
+</div>
